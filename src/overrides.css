@@ -1,0 +1,13 @@
+/* Unicode-safe CSV preview and flashcard typography overrides. */
+.preview-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 13px; border-bottom: 1px solid var(--line); font-size: 10px; }
+.preview-row label { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-weight: 600; }
+.preview-row input, .preview-row textarea { width: 100%; min-width: 0; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--text); padding: 9px; font: 13px/1.55 "Noto Sans", "DejaVu Sans", "Segoe UI", Arial, sans-serif; }
+.preview-row textarea { min-height: 58px; resize: vertical; }
+.preview-row input:focus, .preview-row textarea:focus { border-color: var(--accent); outline: 2px solid #9b8df044; }
+.flashcard .card-face { font-family: "Noto Sans", "DejaVu Sans", "Segoe UI", Arial, sans-serif; overflow-y: auto; overflow-x: hidden; }
+.flashcard .card-face h2 { max-width: 100%; font-family: "Noto Sans", "DejaVu Sans", "Segoe UI", Arial, sans-serif; font-size: clamp(18px, 4vw, 27px); line-height: 1.5; overflow-wrap: anywhere; white-space: pre-wrap; }
+.flashcard .card-face .ipa, .flashcard .card-face .example { max-width: 100%; font-family: "Noto Sans", "DejaVu Sans", "Segoe UI", Arial, sans-serif; font-variant-ligatures: none; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; }
+.flashcard .card-face .ipa { font-size: 14px; }
+.flashcard .card-face .example { max-height: 112px; overflow-y: auto; width: 100%; margin: 6px 0 15px; font-size: 13px; }
+.flashcard .card-face .card-label, .flashcard .card-face small { font-family: "DM Sans", Arial, sans-serif; }
+@media (max-width: 740px) { .preview-row { grid-template-columns: minmax(0, 1fr); } .flashcard .card-face { padding: 42px 24px; } }
